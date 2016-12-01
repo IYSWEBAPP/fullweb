@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^ideasysoluciones.hol.es/dev/iys/$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^ideasysoluciones.hol.es/dev/iys/$
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
